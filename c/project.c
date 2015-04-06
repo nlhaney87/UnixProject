@@ -39,11 +39,13 @@ int main(int argc, char *argv[])
 		}
 	}
 	
-	double pi = 4.0*(double)score/(double)total;
+	double pi = 4.0*(double)score/total;
 	seconds = time(NULL) - seconds;
+	double error = fabs((pi-M_PI)*100);
 
 	printf("Out of %d randomly generated points, %d of them were within the area of the circle.\n",total,score);
-	printf("The estimated value of pi is %lf.\n",pi);
+	printf("The estimated value of pi is %.17lf.\n",pi);
+	printf("Error of estimated value is %lf\n",error);
 	printf("It took %ld seconds to estimate pi.\n",seconds);
 
 	return 0;
