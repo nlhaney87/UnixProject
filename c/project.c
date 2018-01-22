@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	int score = 0;
 	int total;
 	int i;
+	int gitTest;
 
 	if (argc != 2){
 		total = 10000000;
